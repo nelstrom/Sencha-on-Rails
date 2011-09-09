@@ -1,0 +1,23 @@
+[_] themes
+	[_] problems solved twice
+		[_] dynamic loading of JS
+			[_] Ext.js loader allows use of static index.html
+			[_] rails dynamic includes introspect on filesystem
+		[_] JS compilation
+			[_] the Sencha command
+			[_] the asset pipeline
+[_] including the framework
+	[_] vendor
+	[_] gem
+	[_] hardcopy
+[_] Asset pipeline
+	[_] coffeescript
+		[_] sprockets inclusion
+	[_] sass
+		[_] compass integration
+[_] HTTP interface
+	[_] READ only
+		[_] serving complex JSON objects
+	[_] CRUD
+		[_] Rails RESTful controllers
+		[_] Sencha's REST proxy
