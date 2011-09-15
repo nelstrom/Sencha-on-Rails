@@ -1,3 +1,9 @@
+[_] build from scratch (almost)
+	[_] generate new rails project
+	[_] import Forms-demo from github
+	[_] add Sencha Touch libraries to vendor/assets
+	[_] generate a 'touch' controller
+	[_] switch from localstorage to REST storage
 [_] themes
 	[_] problems solved twice
 		[_] dynamic loading of JS
@@ -7,17 +13,83 @@
 			[_] the Sencha command
 			[_] the asset pipeline
 [_] including the framework
-	[_] vendor
-	[_] gem
 	[_] hardcopy
+		: Old way
+		: in public/javascripts/sencha-touch.js
+	[_] vendor
+		: vendor/assets/javascripts/sencha-touch.js
+		: vendor/assets/stylesheets/sencha-touch.css
+	[_] gem c.f. jquery-rails
+[_] where to put the app.js
+	[_] use application.js as app.js
+	[_] lib/assets/javascripts/app/app.js
+		: //= require sencha-touch
+		: //= require "app/app.js"
+		: //= require_tree "../../../lib/assets/javascripts/app/models"
+		: //= require_tree "../../../lib/assets/javascripts/app/stores"
+		: //= require_tree "../../../lib/assets/javascripts/app/views"
+		: //= require_tree "../../../lib/assets/javascripts/app/controllers"
+	[_] lib/touch/app.js
+		[_] add a custom requirement to the config/application.rb
+			: config.assets.paths << File.join(Rails.root, 'lib, 'touch')
+		: //= require sencha-touch
+		: //= require "app/app.js"
+		: //= require_tree "../../../lib/touch/models"
+		: //= require_tree "../../../lib/touch/stores"
+		: //= require_tree "../../../lib/touch/views"
+		: //= require_tree "../../../lib/touch/controllers"
+	[_] app/assets/javascripts/app/app.js
+		: //= require sencha-touch
+		: //= require "app/app.js"
+		: //= require_tree "./app/models"
+		: //= require_tree "./app/stores"
+		: //= require_tree "./app/views"
+		: //= require_tree "./app/controllers"
+	[_] app/assets/javascripts/app.js
+		: //= require sencha-touch
+		: //= require "app.js"
+		: //= require_tree "models"
+		: //= require_tree "stores"
+		: //= require_tree "views"
+		: //= require_tree "controllers"
 [_] Asset pipeline
 	[_] coffeescript
 		[_] sprockets inclusion
 	[_] sass
 		[_] compass integration
+[_] Advanced topics
+	[_] Ext Direct
+		: http://www.sencha.com/products/extjs/extdirect
+		: http://www.sencha.com/forum/showthread.php?67992-Ext.Direct-Server-side-Stacks
+		: http://blog.extjs.eu/know-how/mastering-ext-direct-part-1/
+		[_] as Rack middleware
+			: https://github.com/stonegao/active-direct
+			: http://www.slideshare.net/stonegao/active-direct-talk-directly-with-activerecord-using-extdirect-and-rack-middleware-2328908
+	[_] authentication
+		[_] force user to sign in
+		[_] include API key/session info with each request (in cookie!)
+	[_] CSRF token
+		[_] fetch from cookie
+			: only if it is stored in the cookie
+		[_] use .js.erb <%= form_authenticity_token %>
+		[_] WTF does it do? - security
+			: http://stackoverflow.com/questions/3764589/how-do-i-include-django-1-2s-csrf-token-in-a-javascript-generated-html-form
+			: http://stackoverflow.com/posts/5485616/edit/27d81a9d-fe4c-4a7b-a7db-c150be0ebcef
+			: http://stackoverflow.com/questions/7203304/warning-cant-verify-csrf-token-authenticity-rails
+			: http://stackoverflow.com/questions/5000333/how-does-rails-csrf-protection-work
+			: http://www.sencha.com/forum/showthread.php?67313-3.0-Ext.Direct-Routers-for-Rails-and-Merb&p=378912&viewfull=1#post378912
 [_] HTTP interface
 	[_] READ only
-		[_] serving complex JSON objects
+		[_] serving complex JSON objects with the "presenter" pattern
 	[_] CRUD
 		[_] Rails RESTful controllers
 		[_] Sencha's REST proxy
+		[_] list view with infinite scroll
+			[_] using will_paginate (or other)
+		[_] list to detail view
+	[_] validations
+		[_] rails validations
+	[_] associations
+		[_] nesting models inside a form
+	[_] JSONP
+		[_] Rack middleware
