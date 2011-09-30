@@ -3,6 +3,9 @@
 	"sections": [
 		"intro",
 		"from_scratch",
-		"authentication"
+		"authentication",
+		"crud",
+		"asset_pipeline",
+		"jsonp"
 	]
 }

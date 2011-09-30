@@ -43,6 +43,7 @@ The asset pipeline
 	compass - not yet
 Rails as a backend to standalone apps
 	JSONP
+	Sencha: 'scripttag' proxy
 	callback parameter
 	rack middleware
 	: https://github.com/robertodecurnex/rack-jsonp-middleware
