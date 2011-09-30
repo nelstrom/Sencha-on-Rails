@@ -223,6 +223,25 @@
     <body></body>
     </html>
 
+!SLIDE center
+
+![](../images/csrf-rails-guide.png)
+
+!SLIDE smaller code
+
+## touch/overrides.js.coffee
+
+    @@@coffeescript
+    Ext.Ajax.on('beforerequest',
+      (connection, options) ->
+        token = Ext.select('meta[name="csrf-token"]')
+        if token.first()?
+          content = token.first().dom.content
+          options.headers ||= {}
+          options.headers["X-CSRF-Token"] = content
+      this
+    )
+
 !SLIDE
 
 ## Further reading
