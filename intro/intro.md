@@ -1,6 +1,9 @@
 !SLIDE bullets
 
-# Contents
+# Backing your Sencha apps
+# with a Rails API
+
+!SLIDE bullets incremental
 
 * Hello World!
 * Setting up authentication
@@ -10,7 +13,7 @@
 
 !SLIDE
 
-# Teado - our demo application
+# Demo app: Teado
 
 * source on github
 * video walkthrough
