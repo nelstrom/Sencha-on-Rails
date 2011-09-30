@@ -1,12 +1,10 @@
-!SLIDE
+!SLIDE bullets
 
-# Intro
+# Contents
 
-* Hello World! (easy)
-* Setting up authentication (hard but important)
-* Simple CRUD (easy again)
-* Virtual attributes (useful)
-* Associations
+* Hello World!
+* Setting up authentication
+* Simple CRUD
 * Asset pipeline
 * Rails as a backend to standalone apps
 

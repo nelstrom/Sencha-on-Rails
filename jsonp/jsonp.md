@@ -105,8 +105,10 @@ prevents a document or script loaded from one origin from getting or setting pro
 
 ## Further reading
 
+* [MDN: Same origin policy][origin]
 * Sencha's [JsonP proxy][s]
 * [Rack JSONP middleware][mid]
 
+[origin]: https://developer.mozilla.org/en/Same_origin_policy_for_JavaScript
 [s]: http://docs.sencha.com/ext-js/4-0/#!/api/Ext.data.proxy.JsonP
 [mid]: https://github.com/robertodecurnex/rack-jsonp-middleware
