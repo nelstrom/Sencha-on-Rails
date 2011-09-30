@@ -1,0 +1,45 @@
+Outline
+	My experience
+	show off Teado
+Creating a rails app from scratch
+	rails new ~/code/Teado
+	cd !$
+	edit config/database.yml
+	rake db:create
+	rails serve
+	rails generate controller touch
+	copy Sencha Touch libs to vendor/assets
+	create an application at app/assets/javascripts/app/app.js.coffee
+	set up the view
+Authentication
+	Use Railscasts demo auth from scratch
+	show model <- business logic
+	show routes
+	show the sessions controller JSON only
+	Sencha side:
+		show login form
+		show currentUser store
+		handle success
+		handle failure
+	GOTCHA: CSRF protection
+Simple CRUD
+	rails generate model tag name:string
+	rake db:migrate
+	examine the generated controller
+		7 actions
+		html AND json responses
+	show the corresponding sencha controller
+	GOTCHA: form.load(model) conflict
+Virtual attributes
+	demonstrate adding due_at via bucket text
+Associations
+	rails generate migration create_tags_tasks_table
+	rails: task has_many :tags
+	sencha: ditto!
+The asset pipeline
+	coffeescript WORKS!
+	compass - not yet
+Rails as a backend to standalone apps
+	JSONP
+	callback parameter
+	rack middleware

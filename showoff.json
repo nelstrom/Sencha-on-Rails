@@ -1,0 +1,8 @@
+{
+	"name": "Sencha on Rails",
+	"sections": [
+		"intro",
+		"from_scratch",
+		"authentication"
+	]
+}
