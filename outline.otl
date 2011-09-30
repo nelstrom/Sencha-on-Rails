@@ -1,3 +1,4 @@
+FIXME: all 'App' references should instead say 'Teado'
 Outline
 	My experience
 	show off Teado
@@ -18,9 +19,10 @@ Authentication
 	show the sessions controller JSON only
 	Sencha side:
 		show login form
-		show currentUser store
 		handle success
 		handle failure
+		show currentUser store
+		show dashboard panel
 	GOTCHA: CSRF protection
 Simple CRUD
 	rails generate model tag name:string
@@ -43,3 +45,5 @@ Rails as a backend to standalone apps
 	JSONP
 	callback parameter
 	rack middleware
+	: https://github.com/robertodecurnex/rack-jsonp-middleware
+	: https://github.com/rack/rack-contrib

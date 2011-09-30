@@ -26,26 +26,6 @@
 
 !SLIDE smaller code
 
-## app/models/user.rb
-
-    @@@ruby
-    class User < ActiveRecord::Base
-      
-      def self.authenticate(email, password)
-        if user = find_by_email(email)
-          secret = BCrypt::Engine.hash_secret(
-                     password, user.password_salt)
-
-          if user.password_hash == secret
-            user
-          end
-        end
-      end
-      
-    end
-
-!SLIDE smaller code
-
 ## app/controllers/sessions_controller.rb
 
     @@@ruby
@@ -122,21 +102,79 @@
             }
           ]
         )
+!SLIDE smaller code
+
+## touch/controllers/Sessions.js.coffee
+
+    @@@coffeescript
+    Ext.regController 'Sessions',
+
+      create: (params) ->
+        params.form.submit(
+
+          success: ->
+            Ext.dispatch
+              controller: 'dashboard'
+              action: 'index'
+
+          failure: (form, result) ->
+            form.showErrors(result)
+
+        )
 
 !SLIDE smaller code
 
-## app/controllers/users_controller.rb
+## touch/stores/CurrentUser.js.coffee
 
-    @@@ruby
-    def create
-      @user = User.new(params[:user])
-      if @user.save
-        redirect_to root_url, :notice => "Signed up!"
-      else
-        render "new"
-      end
-    end
+    @@@coffeescript
+    App.stores.currentUser = new Ext.data.Store(
+      fields: [
+        {name: 'active',   type: 'boolean'}
+        {name: 'username', type: 'string'}
+      ]
+    )
 
+
+!SLIDE smaller code
+
+## touch/controllers/Sessions.js.coffee
+
+    @@@coffeescript
+    success: (form, response) ->
+      App.stores.currentUser.removeAll()
+      App.stores.currentUser.add(response.current_users[0])
+
+      Ext.dispatch
+        controller: 'dashboard'
+        action: 'index'
+
+!SLIDE smaller code
+
+## touch/views/Dashboard.js.coffee
+
+    @@@coffeescript
+    App.views.Dashboard = Ext.extend Ext.Panel,
+
+      initComponent: () ->
+
+        Ext.apply this,
+          scroll: 'vertical'
+          tpl: 'Welcome, {username}!'
+          styleHtmlContent: true
+          listeners:
+            beforeactivate: ->
+              if user = App.stores.currentUser.first()
+                @update(user.data)
+
+!SLIDE
+
+## DEMO
+
+!SLIDE
+
+* [Snapshot on github][01]
+
+[01]: http://github.com/nelstrom/Teado
 
 !SLIDE 
 
@@ -160,6 +198,29 @@
     <%= yield %>
 
     </body>
+    </html>
+
+!SLIDE smaller
+
+    @@@html
+    <!DOCTYPE html>
+    <html>
+    <head>
+      <title>Teado</title>
+      <link href="/assets/sencha-touch.css"/>
+      <script src="/assets/sencha-touch.js"></script>
+      <script src="/assets/app.js"></script>
+
+      ...
+
+      <meta name="csrf-param"
+        content="authenticity_token"/>
+
+      <meta name="csrf-token"
+        content="8Yfi73UlA9PYPMWFCdiMlcMpHYT+/5Wf+4BIE0tmyf0="/>
+
+    </head>
+    <body></body>
     </html>
 
 !SLIDE
