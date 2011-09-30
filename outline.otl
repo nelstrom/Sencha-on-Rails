@@ -2,6 +2,11 @@ FIXME: all 'App' references should instead say 'Teado'
 Outline
 	My experience
 	show off Teado
+Rails culture
+	rails command
+	rake
+	bundle
+	rack middlewares
 Creating a rails app from scratch
 	rails new ~/code/Teado
 	cd !$

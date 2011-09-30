@@ -45,22 +45,68 @@ prevents a document or script loaded from one origin from getting or setting pro
     @@@ruby
     class TouchController < ActionController::Base
 
-      before_filter :customize_content_type
+      before_filter :jsonp_content_type
 
       private
       
-      def customize_content_type
-        if params[:callback]
+      def jsonp_content_type
+        if !params[:callback].blank?
           response.content_type = "text/JavaScript"
         end
       end
 
     end
 
+!SLIDE small
+
+.notes including callback on all json responses is hard!
+
+    @@@ruby
+    def index
+      @tags = Tag.all
+      render :json     => { :tags => @tags},
+             :callback => params[:callback]
+    end
+
+!SLIDE
+
+## Rack Middleware
+
+!SLIDE
+
+## TODO: illustration of rack middleware
+
+!SLIDE
+
+## Using middleware to serve JSONP
+
+!SLIDE code small
+
+## config/application.rb
+
+    @@@ruby
+    require 'rack/jsonp'
+
+    module Teado
+      class Application < Rails::Application
+        # ...
+        config.middleware.use Rack::JSONP
+        # ...
+      end
+    end
+
+!SLIDE
+
+## SET IT
+### &
+## FORGET IT
+
 !SLIDE
 
 ## Further reading
 
 * Sencha's [JsonP proxy][s]
+* [Rack JSONP middleware][mid]
 
 [s]: http://docs.sencha.com/ext-js/4-0/#!/api/Ext.data.proxy.JsonP
+[mid]: https://github.com/robertodecurnex/rack-jsonp-middleware
