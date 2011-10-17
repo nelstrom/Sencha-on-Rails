@@ -138,3 +138,23 @@
     //= require_tree "app/controllers"
 
 !SLIDE 
+
+# CRITICISM
+
+!SLIDE
+
+## SPROCKETS
+
+### one size does not fit all
+
+!SLIDE bullets incremental
+
+## EXISTING SOLUTIONS
+
+* Compass
+* CommonJS
+* npm
+
+[CommonJS]: http://alexmaccaw.co.uk/posts/rails_js_packaging
+[nodeify]: https://github.com/dkastner/nodeify
+[stitch-rb]: https://github.com/maccman/stitch-rb
