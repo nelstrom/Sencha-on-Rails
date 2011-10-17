@@ -54,10 +54,12 @@
     @@@javascript
     {
       "success" : true,
-      "current_users": [{
-        "username" : "drew",
-        "active"   : true
-      }]
+      "current_users": [
+        {
+          "username" : "drew",
+          "active"   : true
+        }
+      ]
     }
 
 !SLIDE smaller code

@@ -7,6 +7,46 @@ Rails culture
 	rake
 	bundle
 	rack middlewares
+The asset pipeline
+	introduction
+		New set of conventions/technologies for images/scipts/styles
+		Compilation
+			sass -> css
+			coffeescript -> js
+		Development mode
+			Dynamically include scripts/styles
+			Compile changed files on demand
+			Unmodified files: 301 header (not modified)
+		Production mode
+			Concatenation
+			Minification
+			Cache busting filename fingerprints
+	Using with Sencha
+		Load paths:
+			/app/assets/
+			/lib/assets/
+			/vendor/assets/
+		Install:
+			vendor/assets/javascripts/sencha-touch.js
+			vendor/assets/stylesheets/sencha-touch.css
+		Set up Sprockets directives (require, require_tree)
+			app/assets/stylesheets/application.css
+			app/assets/javascripts/application.js
+		Touch application
+			Rails convention: app/assets/javascripts/app
+			Sencha convention: app/app.js
+			Convention: many/nested/directories/app.js
+			mkdir touch
+			ln -s touch app/assets/javascripts/app
+		Compass integration
+			rails 3.1.1
+			Gemfile: compass, :tag => "v0.12.alpha.0"
+			Ad hoc: vendor/plugins/compass_extensions/sencha-touch
+	Criticisms
+		First release - rough edges
+		Sprockets - one size doesn't fit all
+		Compass is better for managing SASS
+		npm is better for managing JS dependencies 
 Creating a rails app from scratch
 	rails new ~/code/Teado
 	cd !$
@@ -43,9 +83,6 @@ Associations
 	rails generate migration create_tags_tasks_table
 	rails: task has_many :tags
 	sencha: ditto!
-The asset pipeline
-	coffeescript WORKS!
-	compass - not yet
 Rails as a backend to standalone apps
 	JSONP
 	Sencha: 'scripttag' proxy
