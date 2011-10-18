@@ -41,7 +41,9 @@ The asset pipeline
 		Compass integration
 			rails 3.1.1
 			Gemfile: compass, :tag => "v0.12.alpha.0"
-			Ad hoc: vendor/plugins/compass_extensions/sencha-touch
+			Gemfile: compass-sencha-touch, :tag => "1.1.1"
+			Update touch.css -> touch.css.scss
+			Replace =require with @import
 	Criticisms
 		First release - rough edges
 		Sprockets - one size doesn't fit all

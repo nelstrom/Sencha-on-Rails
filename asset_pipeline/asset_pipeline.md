@@ -144,6 +144,10 @@
 
 !SLIDE
 
+# SENCHA INTEGRATION
+
+!SLIDE
+
 ## Rails convention
 
     app/
@@ -193,3 +197,75 @@
 !SLIDE center
 
 ![](../images/file-browser-2.png)
+
+!SLIDE
+
+# THEMING
+## COMPASS INTEGRATION
+
+!SLIDE code smaller
+
+## Gemfile
+
+    @@@ruby
+    group :assets do
+      gem "sass-rails", "~> 3.1.4"
+      gem "compass"
+
+
+    end
+
+!SLIDE code smaller
+
+## Gemfile
+
+    @@@ruby
+    group :assets do
+      gem "sass-rails", "~> 3.1.4"
+      gem "compass",
+        :git => "github.com/chriseppstein/compass.git",
+        :tag => "v0.12.alpha.0"
+    end
+
+!SLIDE code smaller
+
+## Gemfile
+
+    @@@ruby
+    group :assets do
+      gem "sass-rails", "~> 3.1.4"
+      gem "compass",
+        :git => "github.com/chriseppstein/compass.git",
+        :tag => "v0.12.alpha.0"
+
+      gem "sencha-touch",
+        :git =>
+          "github.com/nelstrom/compass-sencha-touch.git"
+    end
+
+!SLIDE code small
+
+## app/assets/stylesheets/touch.css
+
+    @@@css
+    /*
+     *= require sencha-touch
+    */
+
+!SLIDE code small
+
+## app/assets/stylesheets/touch.css.scss
+
+    @@@css
+    @import 'sencha-touch/default/all';
+    @include sencha-panel;
+    @include sencha-buttons;
+    @include sencha-sheet;
+    @include sencha-picker;
+    @include sencha-tabs;
+    @include sencha-toolbar;
+    /* ...etc... */
+
+.notes Compile custom stylesheet
+
+[compass-rails31]: https://gist.github.com/1184843
