@@ -109,52 +109,87 @@
      *= require sencha-touch
     */
 
-!SLIDE code small
-
-## app/assets/javascripts/touch.js
-
-    @@@javascript
-    //= require sencha-touch
-    //= require "app/routes"
-    //= require "app/app"
-    //= require "app/overrides"
-    //
-    //
-    //
-    //
+.notes fine for loading ST theme sans-customizations
+.notes for themeing - use compass (see below)
 
 !SLIDE code small
 
 ## app/assets/javascripts/touch.js
 
     @@@javascript
-    //= require sencha-touch
-    //= require "app/routes"
-    //= require "app/app"
-    //= require "app/overrides"
-    //= require_tree "app/models"
-    //= require_tree "app/stores"
-    //= require_tree "app/views"
-    //= require_tree "app/controllers"
+    //= require      "sencha-touch"
+    //= require      "app/routes"
+    //= require      "app/app"
+    //= require      "app/overrides"
+    //
+    //
+    //
+    //
 
-!SLIDE 
+!SLIDE code small
 
-# CRITICISM
+## app/assets/javascripts/touch.js
+
+    @@@javascript
+    //= require      "sencha-touch"
+    //= require      "app/routes"
+    //= require      "app/app"
+    //= require      "app/overrides"
+    //= require_tree "./app/models"
+    //= require_tree "./app/stores"
+    //= require_tree "./app/views"
+    //= require_tree "./app/controllers"
+
+.notes 'require_tree' must be a RELATIVE PATH
 
 !SLIDE
 
-## SPROCKETS
+## Rails convention
 
-### one size does not fit all
+    app/
+      models/
+      views/
+      controllers/
+      assets/
 
-!SLIDE bullets incremental
+!SLIDE
 
-## EXISTING SOLUTIONS
+## Sencha convention
 
-* Compass
-* CommonJS
-* npm
+    app/
+      models/
+      views/
+      controllers/
+      stores/
 
-[CommonJS]: http://alexmaccaw.co.uk/posts/rails_js_packaging
-[nodeify]: https://github.com/dkastner/nodeify
-[stitch-rb]: https://github.com/maccman/stitch-rb
+!SLIDE
+
+## Rails + Sencha
+
+    app/
+      models/
+      views/
+      controllers/
+      assets/
+        javascripts/
+          app/
+            controllers/
+            models/
+            stores/
+            views/
+
+!SLIDE commandline incremental
+
+## SYMLINK
+
+    $ ln -s app/assets/javascripts/app touch
+
+.notes Convenience - don't check in to source control
+
+!SLIDE center
+
+![](../images/file-browser-1.png)
+
+!SLIDE center
+
+![](../images/file-browser-2.png)
