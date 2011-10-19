@@ -294,6 +294,8 @@
 [compass-rails31]: https://gist.github.com/1184843
 [theme]: https://github.com/nelstrom/compass-sencha-touch
 
+!SLIDE code small
+
 ## app/assets/javascripts/touch/app.js.coffee
 
     @@@coffeescript

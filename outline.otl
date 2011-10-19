@@ -72,7 +72,7 @@ Authentication
 		show dashboard panel
 	GOTCHA: CSRF protection
 Ruby speaks JSON
-	
+	JS parseInt("042")
 Simple CRUD
 	rails generate model tag name:string
 	rake db:migrate

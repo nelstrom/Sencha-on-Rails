@@ -6,6 +6,7 @@
 		"authentication",
 		"crud",
 		"asset_pipeline",
+		"serving_json",
 		"jsonp"
 	]
 }
