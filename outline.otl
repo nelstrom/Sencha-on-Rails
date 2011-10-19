@@ -71,6 +71,8 @@ Authentication
 		show currentUser store
 		show dashboard panel
 	GOTCHA: CSRF protection
+Ruby speaks JSON
+	
 Simple CRUD
 	rails generate model tag name:string
 	rake db:migrate

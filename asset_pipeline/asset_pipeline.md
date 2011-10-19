@@ -27,6 +27,22 @@
 
 !SLIDE
 
+### screenshot showing 3 terminals
+
+* rails server
+* compass watch
+* coffee watch
+
+!SLIDE
+
+### screenshot showing 3 terminals
+
+* rails server
+* <strike>compass watch</strike>
+* <strike>coffee watch</strike>
+
+!SLIDE
+
 ## DEVELOPMENT MODE
 
 !SLIDE smaller
@@ -268,4 +284,35 @@
 
 .notes Compile custom stylesheet
 
+!SLIDE
+
+## LINKS
+
+* [Installing compass in a rails 3.1 app][compass-rails31]
+* [Sencha Touch theme rubygem][theme]
+
 [compass-rails31]: https://gist.github.com/1184843
+[theme]: https://github.com/nelstrom/compass-sencha-touch
+
+## app/assets/javascripts/touch/app.js.coffee
+
+    @@@coffeescript
+    new Ext.Application
+      name: 'Teado'
+      launch: ->
+        @views.viewport = new @views.Viewport()
+
+!SLIDE code small
+
+## touch/views/Viewport.js.coffee
+
+    @@@coffeescript
+    App.views.Viewport = Ext.extend Ext.Panel,
+      fullscreen: true
+      layout: 'fit'
+      styleHtmlContent: true
+      html: 'Hello, World!'
+
+!SLIDE center
+
+![](../images/touch-hello-world.png)
