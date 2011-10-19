@@ -73,6 +73,10 @@ Authentication
 	GOTCHA: CSRF protection
 Ruby speaks JSON
 	JS parseInt("042")
+	rails as_json
+		:only => [whitelist]
+		:except => [blacklist]
+		:more laterz (associations, virtual attributes)
 Simple CRUD
 	rails generate model tag name:string
 	rake db:migrate
