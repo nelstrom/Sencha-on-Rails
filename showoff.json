@@ -2,11 +2,12 @@
 	"name": "Sencha on Rails",
 	"sections": [
 		"intro",
-		"from_scratch",
-		"authentication",
-		"crud",
 		"asset_pipeline",
+		"hello_world",
 		"serving_json",
+		"crud",
+		"authentication",
+		// "csrf",
 		"jsonp"
 	]
 }

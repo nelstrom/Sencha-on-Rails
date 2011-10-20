@@ -73,10 +73,16 @@ Authentication
 	GOTCHA: CSRF protection
 Ruby speaks JSON
 	JS parseInt("042")
+	ruby to_s/to_i
 	rails as_json
 		:only => [whitelist]
 		:except => [blacklist]
 		:more laterz (associations, virtual attributes)
+Associations
+	rails generate migration create_tags_tasks_table
+	rails: task has_many :tags
+	sencha: ditto!
+	as_json :include => :tags
 Simple CRUD
 	rails generate model tag name:string
 	rake db:migrate
@@ -87,10 +93,6 @@ Simple CRUD
 	GOTCHA: form.load(model) conflict
 Virtual attributes
 	demonstrate adding due_at via bucket text
-Associations
-	rails generate migration create_tags_tasks_table
-	rails: task has_many :tags
-	sencha: ditto!
 Rails as a backend to standalone apps
 	JSONP
 	Sencha: 'scripttag' proxy

@@ -114,7 +114,6 @@
       end
     end
 
-
 !SLIDE code small
 
     @@@coffeescript
@@ -127,3 +126,152 @@
         reader:
           type: 'json'
           root: 'tasks'
+
+!SLIDE code smaller
+
+    @@@javascript
+    {
+        "tasks": [
+            {
+                "assigned_to": 1,
+                "completed_at": null,
+                "due_at": null,
+                "id": 1,
+                "name": "Lorem ipsum dolor sit amet",
+                "updated_at": "2011-10-14T18:02:25Z",
+                "created_at": "2011-10-14T18:02:25Z",
+            }
+        ]
+    }
+
+!SLIDE code smaller
+
+    @@@ruby
+    class Task < ActiveRecord::Base
+      def as_json
+        super :except => [:updated_at, :created_at]
+      end
+    end
+
+!SLIDE code smaller
+
+    @@@javascript
+    {
+        "tasks": [
+            {
+                "assigned_to": 1,
+                "completed_at": null,
+                "due_at": null,
+                "id": 1,
+                "name": "Lorem ipsum dolor sit amet"
+            }
+        ]
+    }
+
+!SLIDE code smaller
+
+    @@@ruby
+    class Task < ActiveRecord::Base
+      def as_json
+        super :only => [:id, :name]
+      end
+    end
+
+!SLIDE code smaller
+
+    @@@javascript
+    {
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Lorem ipsum dolor sit amet"
+            }
+        ]
+    }
+
+!SLIDE
+
+# MODEL ASSOCIATIONS
+
+!SLIDE code smaller
+
+## RAILS MODELS
+
+    @@@ruby
+    class Task < ActiveRecord::Base
+      has_and_belongs_to_many :tags
+    end
+
+    class Tag < ActiveRecord::Base
+      has_and_belongs_to_many :tasks
+    end
+
+!SLIDE code smaller
+
+## JOIN TABLE
+
+    @@@ruby
+    class CreateTagsTasks < ActiveRecord::Migration
+      def up
+        create_table :tags_tasks, :id => false do |t|
+          t.references :tag
+          t.references :task
+        end
+      end
+    end
+
+!SLIDE code smaller
+
+## SENCHA MODEL
+
+    @@@coffeescript
+    App.models.Task = Ext.regModel 'Task',
+      fields: [
+        {name: 'id',       type: 'number'}
+        {name: 'name',     type: 'string'}
+      ]
+      hasMany: { model: 'Tag', name: 'tags' }
+
+!SLIDE code smaller
+
+## RAILS MODELS
+
+    @@@ruby
+    class Task < ActiveRecord::Base
+
+      has_and_belongs_to_many :tags
+
+      def as_json
+        super {
+          :only    => [:id, :name],
+          :include => :tags
+        }
+      end
+
+    end
+
+!SLIDE code smaller
+
+    @@@javascript
+    {
+        "tasks": [
+            {
+                "id": 1,
+                "name": "Lorem ipsum dolor sit amet",
+                "tags": [
+                    { "name": "latin" },
+                    { "name": "placeholder" }
+                ]
+            }
+        ]
+    }
+
+!SLIDE code small
+
+    @@@javascript
+    tasks = App.store.tasks.data.items
+    [ object ]
+    task = tasks[0]
+    object
+    tags = task.tags().data.items
+    [ object, object ]
