@@ -244,7 +244,7 @@
       this
     )
 
-!SLIDE
+!SLIDE bullets
 
 ## Further reading
 

@@ -123,7 +123,7 @@ prevents a document or script loaded from one origin from getting or setting pro
 ### &
 ## FORGET IT
 
-!SLIDE
+!SLIDE bullets
 
 ## Further reading
 
