@@ -25,21 +25,13 @@
 
 ![Screenshot of the homepage for Coffeescript](../images/homepage-coffeescript.png)
 
-!SLIDE
+!SLIDE center
 
-### screenshot showing 3 terminals
+![screenshot showing 3 terminals](../images/terminal-sessions-3.png)
 
-* rails server
-* compass watch
-* coffee watch
+!SLIDE center
 
-!SLIDE
-
-### screenshot showing 3 terminals
-
-* rails server
-* <strike>compass watch</strike>
-* <strike>coffee watch</strike>
+![screenshot showing 1 terminals](../images/terminal-sessions-1.png)
 
 !SLIDE
 
@@ -293,28 +285,3 @@
 
 [compass-rails31]: https://gist.github.com/1184843
 [theme]: https://github.com/nelstrom/compass-sencha-touch
-
-!SLIDE code small
-
-## app/assets/javascripts/touch/app.js.coffee
-
-    @@@coffeescript
-    new Ext.Application
-      name: 'Teado'
-      launch: ->
-        @views.viewport = new @views.Viewport()
-
-!SLIDE code small
-
-## touch/views/Viewport.js.coffee
-
-    @@@coffeescript
-    App.views.Viewport = Ext.extend Ext.Panel,
-      fullscreen: true
-      layout: 'fit'
-      styleHtmlContent: true
-      html: 'Hello, World!'
-
-!SLIDE center
-
-![](../images/touch-hello-world.png)

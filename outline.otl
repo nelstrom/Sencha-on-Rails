@@ -71,6 +71,7 @@ Authentication
 		show currentUser store
 		show dashboard panel
 	GOTCHA: CSRF protection
+		http://stackoverflow.com/questions/3764589
 Ruby speaks JSON
 	JS parseInt("042")
 	ruby to_s/to_i

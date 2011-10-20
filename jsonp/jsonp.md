@@ -14,17 +14,18 @@ prevents a document or script loaded from one origin from getting or setting pro
 
 !SLIDE small
 
-## Serving JSON from rails
+## Serving *JSON* from rails
 
     @@@ruby
     def index
       @tags = Tag.all
-      render :json => { :tags => @tags} 
+      render :json     => { :tags => @tags}
+
     end
 
 !SLIDE small
 
-## Serving JSONP from rails
+## Serving *JSON*P from rails
 
     @@@ruby
     def index
@@ -33,12 +34,12 @@ prevents a document or script loaded from one origin from getting or setting pro
              :callback => params[:callback]
     end
 
-!SLIDE
+!SLIDE bullets incremental
 
-## MIME types
+## content-types
 
 * JSON - `application/json`
-* JSONP - `text/JavaScript`
+* JSONP - `application/javascript`
 
 !SLIDE small code
 
@@ -70,22 +71,43 @@ prevents a document or script loaded from one origin from getting or setting pro
 
 !SLIDE
 
-## Rack Middleware
+# Rack Middleware
 
-!SLIDE
+!SLIDE center
 
-## TODO: illustration of rack middleware
+![](../images/middleware-1.png)
+
+!SLIDE center
+
+![](../images/middleware-2.png)
+
+!SLIDE center
+
+![](../images/middleware-3.png)
 
 !SLIDE
 
 ## Using middleware to serve JSONP
 
+!SLIDE center
+
+![](../images/rack-contrib.png)
+
+!SLIDE center
+
+![](../images/rack-contrib-readme.png)
+
 !SLIDE code small
 
-## config/application.rb
 
     @@@ruby
-    require 'rack/jsonp'
+    # Gemfile
+    gem 'rack-contrib'
+
+
+
+    # config/application.rb
+    require 'rack/contrib'
 
     module Teado
       class Application < Rails::Application
@@ -107,8 +129,9 @@ prevents a document or script loaded from one origin from getting or setting pro
 
 * [MDN: Same origin policy][origin]
 * Sencha's [JsonP proxy][s]
-* [Rack JSONP middleware][mid]
+* [rack-contrib middleware][contrib]
 
 [origin]: https://developer.mozilla.org/en/Same_origin_policy_for_JavaScript
 [s]: http://docs.sencha.com/ext-js/4-0/#!/api/Ext.data.proxy.JsonP
 [mid]: https://github.com/robertodecurnex/rack-jsonp-middleware
+[contrib]: https://github.com/rack/rack-contrib

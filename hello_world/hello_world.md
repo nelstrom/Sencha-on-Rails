@@ -1,6 +1,10 @@
+!SLIDE
+
+# HELLO, WORLD!
+
 !SLIDE code small
 
-## app/assets/javascripts/touch/app.js.coffee
+## touch/app.js.coffee
 
     @@@coffeescript
     new Ext.Application

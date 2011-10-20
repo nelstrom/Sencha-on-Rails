@@ -1,19 +1,23 @@
 !SLIDE bullets
 
-# Backing your Sencha apps
-# with a Rails API
+# Sencha on Rails
+## Backing your Sencha apps
+## with a Rails API
 
 !SLIDE bullets incremental
 
+* Asset Pipeline
 * Hello World!
-* Setting up authentication
+* Serving JSON
 * Simple CRUD
-* Asset pipeline
+* Authentication
 * Rails as a backend to standalone apps
 
-!SLIDE
+!SLIDE bullets incremental
 
 # Demo app: Teado
+## A(nother) Sencha Touch Todo list
 
-* source on github
-* video walkthrough
+* [github.com/nelstrom/teado][teado]
+
+[teado]: http://github.com/nelstrom/teado
