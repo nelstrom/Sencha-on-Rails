@@ -98,20 +98,29 @@
         }
       end
     end
+
 !SLIDE code small
 
     @@@ruby
-    # GET /tasks
     # GET /tasks.json
     def index
       @tasks = Task.all
 
-      respond_to do |format|
-        format.html # index.html.erb
-        format.json {
-          render :json => { :tasks => @tasks }
-        }
-      end
+      format.json {
+        render :json => @tasks
+      }
+    end
+
+!SLIDE code small
+
+    @@@ruby
+    # GET /tasks.json
+    def index
+      @tasks = Task.all
+
+      format.json {
+        render :json => { :tasks => @tasks }
+      }
     end
 
 !SLIDE code small
@@ -222,18 +231,6 @@
 
 !SLIDE code smaller
 
-## SENCHA MODEL
-
-    @@@coffeescript
-    App.models.Task = Ext.regModel 'Task',
-      fields: [
-        {name: 'id',       type: 'number'}
-        {name: 'name',     type: 'string'}
-      ]
-      hasMany: { model: 'Tag', name: 'tags' }
-
-!SLIDE code smaller
-
 ## RAILS MODELS
 
     @@@ruby
@@ -266,12 +263,27 @@
         ]
     }
 
-!SLIDE code small
+!SLIDE code smaller
+
+## SENCHA MODEL
+
+    @@@coffeescript
+    App.models.Task = Ext.regModel 'Task',
+      fields: [
+        {name: 'id',       type: 'number'}
+        {name: 'name',     type: 'string'}
+      ]
+      hasMany: { model: 'Tag', name: 'tags' }
+
+!SLIDE commandline incremental
 
     @@@javascript
-    tasks = App.store.tasks.data.items
-    [ object ]
-    task = tasks[0]
+    $ task = App.stores.tasks.data.items[0]
     object
-    tags = task.tags().data.items
+    $ task.name
+    "Lorem ipsum dolor sit amet"
+    $ tags = task.tags().data.items
     [ object, object ]
+    $ Ext.each(tags, function(i) { console.log(i) })
+    "Latin"
+    "Placeholder"
