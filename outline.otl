@@ -97,14 +97,14 @@ CRUD
 		Rails strategy
 		Sencha AJAX override
 	Create
-		Rails scaffold action
-		Repurposed for Sencha
-		Show corresponding Sencha controller
-	Create (Alternate flow)
 		Show sencha form (onSubmit action)
 		Show Screenshot of docs for submit success callback
 		Show Rails controller (don't show scaffold)
 		Switch back to Sencha controller + failure action
+		Screenshot of Sencha form with errors
+	Update
+		Show Tasks#create again
+		Show Tasks#update, highlighting diffs
 Virtual attributes
 	demonstrate adding due_at via bucket text
 Rails as a backend to standalone apps
