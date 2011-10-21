@@ -12,20 +12,6 @@
 
 !SLIDE smaller code
 
-## config/routes.rb
-
-    @@@ruby
-    Teado::Application.routes.draw do
-      get "touch"  => "touch#index"
-      get "logout" => "sessions#destroy", :as => "logout"
-      get "login"  => "sessions#new",     :as => "login"
-      get "signup" => "users#new",        :as => "signup"
-      resources :users
-      resources :sessions
-    end
-
-!SLIDE smaller code
-
 ## app/controllers/sessions_controller.rb
 
     @@@ruby
