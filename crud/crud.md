@@ -6,7 +6,7 @@
 
 ## GOTCHA!
 
-!SLIDE small
+!SLIDE small code
 
 ## app/views/layouts/touch.html.erb
 
@@ -26,7 +26,7 @@
     </body>
     </html>
 
-!SLIDE smaller
+!SLIDE smaller code
 
     @@@html
     <!DOCTYPE html>
@@ -72,27 +72,51 @@
 
 # CREATE
 
-!SLIDE code smaller
+!SLIDE
 
-## Rails controller scaffold
-
-    @@@ruby
-    def create
-      @task = Task.new(params[:task])
-
-      if @task.save
-        render :json     => @task,
-               :status   => :created,
-               :location => @task
-      else
-        render :json     => @task.errors,
-               :status   => :unprocessable_entity
-      end
-    end
+## TODO: screenshot of Task form with 'create' button circled
 
 !SLIDE code smaller
 
-## Rails controller to please Sencha
+## touch/views/tasks/Form.js.coffee
+
+    @@@coffeescript
+    App.views.TasksForm = Ext.extend Ext.form.FormPanel,
+
+      # ...
+
+      onSaveAction: ->
+        Ext.dispatch
+          controller : 'Tasks'
+          action     : 'create'
+          form       : this
+
+      # ...
+
+!SLIDE code smaller
+
+## touch/controllers/Tasks.js.coffee
+
+    @@@coffeescript
+    Ext.regController 'tasks'
+      store: App.stores.tasks
+
+      create: (params) ->
+        params.form.submit(
+          scope: this
+          url: "/tasks.json"
+          success: ->
+            @store.load()
+            @index()
+        )
+
+!SLIDE
+
+## TODO: screenshot of Sencha docs for form#submit function
+
+!SLIDE code smaller
+
+## app/controllers/tasks_controller.rb
 
     @@@ruby
     def create
@@ -108,8 +132,9 @@
       end
     end
 
-
 !SLIDE code smaller
+
+## touch/controllers/Tasks.js.coffee
 
     @@@coffeescript
     Ext.regController 'Tasks'
@@ -118,6 +143,7 @@
       create: (params) ->
         params.form.submit(
           scope: this
+          url: "/tasks.json"
           success: ->
             @store.load()
             @index()
@@ -125,11 +151,81 @@
             form.showErrors(result)
         )
 
+!SLIDE
+
+##TODO: screenshot of form with error messages
+
+!SLIDE
+
+##TODO: screenshot of "Working with forms" on Sencha Learn
+
 !SLIDE code smaller
 
+    http verb    path               action
+    =========    ===========        =======
+
+    GET          /tasks.json        index
+    POST         /tasks.json        create
+
+
+
+    ---------------------------------------
+
+!SLIDE code smaller
+
+    http verb    path               action
+    =========    ===========        =======
+
+    GET          /tasks.json        index
+    POST         /tasks.json        create
+    PUT          /tasks/:id.json    update
+    DELETE       /tasks/:id.json    destroy
+
+    ---------------------------------------
+
+!SLIDE
+
+#UPDATE
+
+!SLIDE code smaller
+
+## touch/controllers/Tasks.js.coffee
+
     @@@coffeescript
-    onSaveAction: ->
-      Ext.dispatch
-        controller : 'Tasks'
-        action     : 'create'
-        form       : this
+    Ext.regController 'Tasks'
+      store: App.stores.tasks
+
+      update: (params) ->
+        model = params.form.getRecord()
+
+        params.form.submit(
+          scope:    this
+          method:   "PUT"
+          url:      "/tasks/#{model.data.id}.json"
+          success:  -> # same as create
+          failure:  -> # same as create
+        )
+
+!SLIDE
+
+#DESTROY
+
+!SLIDE code smaller
+
+## touch/controllers/Tasks.js.coffee
+
+    @@@coffeescript
+    Ext.regController 'Tasks'
+      store: App.stores.tasks
+
+      destroy: (params) ->
+        model = params.form.getRecord()
+
+        params.form.submit(
+          scope:    this
+          method:   "DELETE"
+          url:      "/tasks/#{model.data.id}.json"
+          success:  -> # same as create
+          failure:  -> console.log "not working"
+        )
+
