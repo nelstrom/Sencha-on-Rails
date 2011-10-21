@@ -116,7 +116,6 @@
       store: App.stores.tasks
 
       create: (params) ->
-        controller = this
         params.form.submit(
           scope: this
           success: ->
@@ -125,3 +124,12 @@
           failure: (form, result) ->
             form.showErrors(result)
         )
+
+!SLIDE code smaller
+
+    @@@coffeescript
+    onSaveAction: ->
+      Ext.dispatch
+        controller : 'Tasks'
+        action     : 'create'
+        form       : this
