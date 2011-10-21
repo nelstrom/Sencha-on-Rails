@@ -120,7 +120,7 @@
         params.form.submit(
           scope: this
           success: ->
-            @load()
+            @store.load()
             @index()
           failure: (form, result) ->
             form.showErrors(result)
