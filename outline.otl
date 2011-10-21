@@ -72,6 +72,13 @@ Authentication
 		show dashboard panel
 	GOTCHA: CSRF protection
 		http://stackoverflow.com/questions/3764589
+
+Authentication (alternate flow)
+	Ruby toolbox options
+	Railscasts link
+	Sencha: UserSessions store
+	Rails: Sessions#create
+	Sencha: Dashboard#index
 Ruby speaks JSON
 	JS parseInt("042")
 	ruby to_s/to_i
@@ -105,6 +112,7 @@ CRUD
 	Update
 		Show Tasks#create again
 		Show Tasks#update, highlighting diffs
+		rake routes
 Virtual attributes
 	demonstrate adding due_at via bucket text
 Rails as a backend to standalone apps
