@@ -280,10 +280,13 @@
     @@@javascript
     $ task = App.stores.tasks.data.items[0]
     object
+
     $ task.name
     "Lorem ipsum dolor sit amet"
+
     $ tags = task.tags().data.items
     [ object, object ]
+
     $ Ext.each(tags, function(i) { console.log(i) })
     "Latin"
     "Placeholder"
