@@ -68,4 +68,60 @@
       this
     )
 
-!SLIDE bullets
+!SLIDE
+
+# CREATE
+
+!SLIDE code smaller
+
+## Rails controller scaffold
+
+    @@@ruby
+    def create
+      @task = Task.new(params[:task])
+
+      if @task.save
+        render :json     => @task,
+               :status   => :created,
+               :location => @task
+      else
+        render :json     => @task.errors,
+               :status   => :unprocessable_entity
+      end
+    end
+
+!SLIDE code smaller
+
+## Rails controller to please Sencha
+
+    @@@ruby
+    def create
+      @task = Task.new(params[:task])
+
+      if @task.save
+        render :json => {
+          :success => true,
+          :task    => @task
+        }
+      else
+        render :json => @task.errors
+      end
+    end
+
+
+!SLIDE code smaller
+
+    @@@coffeescript
+    Ext.regController 'Tasks'
+      store: App.stores.tasks
+
+      create: (params) ->
+        controller = this
+        params.form.submit(
+          scope: this
+          success: ->
+            @load()
+            @index()
+          failure: (form, result) ->
+            form.showErrors(result)
+        )
