@@ -18,10 +18,10 @@
 
     @@@coffeescript
     App.views.Viewport = Ext.extend Ext.Panel,
-      fullscreen: true
-      layout: 'fit'
-      styleHtmlContent: true
-      html: 'Hello, World!'
+      layout:            'fit'
+      fullscreen:        true
+      styleHtmlContent:  true
+      html:              'Hello, World!'
 
 !SLIDE center
 
