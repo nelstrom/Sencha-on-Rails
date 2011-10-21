@@ -47,11 +47,11 @@
 		: //= require_tree "stores"
 		: //= require_tree "views"
 		: //= require_tree "controllers"
-[_] Asset pipeline
-	[_] coffeescript
-		[_] sprockets inclusion
-	[_] sass
-		[_] compass integration
+[X] Asset pipeline
+	[X] coffeescript
+		[X] sprockets inclusion
+	[X] sass
+		[X] compass integration
 [_] gotchas
 	[_] CSRF protection
 		[_] why it's there

@@ -1,12 +1,13 @@
 !SLIDE
 
-# The asset pipeline
+# THE ASSET PIPELINE
 
-!SLIDE
+!SLIDE bullets
 
-## The asset pipeline
+## THE ASSET PIPELINE
 
-* Rails 3.1 (released on [31 August, 2011][3.1])
+* Rails 3.1+
+* released on [31 August, 2011][3.1]
 
 .notes a new set of conventions + technologies for managing
 .notes images, stylesheets, and javascripts
