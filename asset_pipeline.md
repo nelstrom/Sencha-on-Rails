@@ -64,8 +64,13 @@ The rails asset pipeline supports sass out of the box, but sadly, compass is not
 
 to your Gemfile, and run `bundle install`.
 
-What with the asset pipeline being relatively new, there's still quite a lot of movement in this space. The latest stable release of compass does not support the rails asset pipeline, so right now, you have to add these lines to install an alpha version of the next release. If you're watching this presentation on video, check to see what the current status is.
+What with the asset pipeline being relatively new, there's still quite a lot of movement in this space. The latest stable release of compass does not support the rails asset pipeline, so right now, you have to add these lines to install an alpha version of the next release. If you're watching this presentation on video, check to see what the current status is, cause this advice won't remain relevant for long.
 
 We also need to install the Sencha Touch compass theme. This comes bundled with the SDK when you download the Sencha Touch framework, but the easiest way to install it into a rails project is as a gem. I've taken the liberty of creating a gem out of the Sencha Touch theme, so you can install it into your rails app straight from github by adding this line to your Gemfile.
 
+Previously, we used a sprockets declaration to load the precompiled sencha touch theme into our application stylesheet. Now that we've loaded compass, we can throw this line away, and replace it with the sass directives to import and include the relevant parts of the Sencha Touch theme.
+
+Doing it this way gives us the flexibility to customize the theme for our app. For example, we only have to load the parts that we're going to use, which means we can create a lighter stylesheet.
+
+I mentioned earlier that this area is still somewhat in flux. I've found that compiling the Sencha Touch theme can take anywhere between 10 an 30 seconds when run inside the asset pipeline. When compiled by compass in isolation, it doesn't take as long as this. But I'm sure this will be ironed out over time.
 
