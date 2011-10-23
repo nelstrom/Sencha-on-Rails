@@ -1,8 +1,10 @@
 [_] screenshots
 	[_] Teado
 		[_] task form with errors
+		[_] task update form, buttons circled
 	[_] documentation 
 		[_] forms#submit()
 
 [_] Teado
 	[_] add error reporting
+

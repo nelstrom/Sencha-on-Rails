@@ -229,3 +229,6 @@
           failure:  -> console.log "not working"
         )
 
+!SLIDE center
+
+TODO: screenshot of the update form, 'update' and 'delete' buttons circled

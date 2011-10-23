@@ -71,3 +71,7 @@ The update action looks almost identical to the create action, except for a coup
 ### DESTROY
 
 The destroy action is very similar, except that use the DELETE method.
+
+### Handlers
+
+Just to complete the picture for you: here's the task update form. In the same way that the 'create' button handler dispatched to the 'create' action, the update and delete buttons each dispatch to the two controller actions we just examined.
