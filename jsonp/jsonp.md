@@ -52,7 +52,7 @@ prevents a document or script loaded from one origin from getting or setting pro
       
       def jsonp_content_type
         if !params[:callback].blank?
-          response.content_type = "text/JavaScript"
+          response.content_type = "text/javascript"
         end
       end
 
