@@ -87,6 +87,12 @@ prevents a document or script loaded from one origin from getting or setting pro
 
 !SLIDE
 
+## SET IT
+### &
+## FORGET IT
+
+!SLIDE
+
 ## Using middleware to serve JSONP
 
 !SLIDE center
@@ -116,12 +122,6 @@ prevents a document or script loaded from one origin from getting or setting pro
         # ...
       end
     end
-
-!SLIDE
-
-## SET IT
-### &
-## FORGET IT
 
 !SLIDE bullets
 

@@ -32,4 +32,26 @@ For a better solution, we'll look to Rack.
 
 ## Rack middleware
 
+Rack is a ruby webserver interface. Rails is compatible with rack, but so too are other ruby web frameworks including Sinatra, and Goliath. So if you write a plugin for Rack, then it can be used in combination with any of these web frameworks. Rack plugins are called 'middlewares'.
 
+Normally, when rails serves a page, we can say that the browser makes an HTTP request, and the server returns an HTTP response.
+
+As the name suggests, middleware sits in between the client and server. 
+
+For each request, the middleware can either modify it and send it on, block it entirely, or simply send it along unchanged. It can do the same with the response.
+
+Every single request and response is filtered through the middleware, which makes it an ideal solution for serving JSONP. We simply inspect each request, to see if it includes a callback parameter. If it does, we strip it away, and forward the request on to Rails. Rails doesn't have to know if JSONP was requested. It simply returns JSON every time. But when the response comes back from Rails, the middleware takes care of wrapping it with the specified callback.
+
+So the client will always receive JSONP when it requests it, and the Rails developer needn't worry about including the callback parameter in every single action.
+
+## Set it, forget it
+
+This is an ideal solution. You can set it up, then forget about it.
+
+## Using middleware to serve JSONP
+
+Dozens of Rack middleware plugins are available. There's a project called `rack-contrib`, which includes a collection of open source middlewares. This text is probably too small for you to read, but at the very top of the list, there's one for serving JSONP. As with all my links, you can get this one from my slidedeck.
+
+## Setup
+
+Installing this into your rails app is straightforward. Simply add 'rack-contrib' to your Gemfile. Then instruct rails to use the Rack::JSONP middleware on start up. You'll need to run `bundle update`, then restart the rails server for these changes to kick in, but then you can forget all about it.
