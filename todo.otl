@@ -1,21 +1,21 @@
 [_] intro
 	[X] link to slides
-	[_] coupon code
+	[_] my contact details
+	[X] coupon code
 		PragProgDrewNeilVim
 		Expires 7 November
-	[_] link to online demo
-	[_] link to Sencha Touch 2 branch
+	[X] link to online demo
+	[X] link to Sencha Touch 2 branch
 
 [_] extra slides
 	[X] link to slidedeck (QR code)
 	[X] link to touch2 branch
-	[_] coupon code
+	[X] coupon code
 	[_] contact me! @nelstrom
 
 [X] Showoff customisation
 	[X] replace Gill Sans with something better
 	[X] style a:visited as blue
-
 [X] screenshots
 	[X] Resize/crop web pages
 		[X] sass
@@ -26,10 +26,14 @@
 		[X] forms#submit()
 		[X] swap ExtJS4 JSONP shot for ST2 of same
 	[X] link images to URLs
-
 [_] Teado
 	[_] add error reporting
 	[_] port to ST2
 		[_] update vendor/assets
 		[_] update the Compass-Sencha-Touch theme (create branch)
 		[_] Ext.define replaces Ext.extend
+
+I'm running a ruby breakout session in the level 4 ballroom (where we had lunch). 
+How about a taste of coffeescript? Join me for the ruby side breakout session, where we'll meet the Rails asset pipeline. #SenchaCon
+
+Slides for my Sencha on Rails breakout session are online here: http://sencha-on-rails.heroku.com/
