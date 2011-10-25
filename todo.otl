@@ -1,17 +1,17 @@
-[_] intro
+[X] intro
 	[X] link to slides
-	[_] my contact details
+	[X] my contact details
 	[X] coupon code
 		PragProgDrewNeilVim
 		Expires 7 November
 	[X] link to online demo
 	[X] link to Sencha Touch 2 branch
 
-[_] extra slides
+[X] extra slides
 	[X] link to slidedeck (QR code)
 	[X] link to touch2 branch
 	[X] coupon code
-	[_] contact me! @nelstrom
+	[X] contact me! @nelstrom
 
 [X] Showoff customisation
 	[X] replace Gill Sans with something better
@@ -33,7 +33,11 @@
 		[_] update the Compass-Sencha-Touch theme (create branch)
 		[_] Ext.define replaces Ext.extend
 
-I'm running a ruby breakout session in the level 4 ballroom (where we had lunch). 
-How about a taste of coffeescript? Join me for the ruby side breakout session, where we'll meet the Rails asset pipeline. #SenchaCon
+I'm running a ruby breakout session in the level 4 ballroom (where we had lunch) #SenchaCon
+In the ruby breakout session, we'll learn how to build an API to back your Sencha Touch app with Rails. REST, CRUD and JSONP REST, CRUD and JSONP.
 
-Slides for my Sencha on Rails breakout session are online here: http://sencha-on-rails.heroku.com/
+At #SenchaCon? Come and learn how to build a restful Rails API to back your Sencha apps at my ruby breakout session.
+In the #SenchaCon ruby breakout session we'll build a simple CRUD demo that consumes JSONP, served by Rails.
+How about a taste of coffeescript? Join me for the ruby breakout session, where we'll meet the Rails asset pipeline #SenchaCon
+
+Slides for my Sencha on Rails breakout session at #SenchaCon are online here: http://sencha-on-rails.heroku.com/

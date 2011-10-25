@@ -35,7 +35,7 @@
 
 ![](../images/teado-live-QR.png)
 
-* [teado.heroku.com](http://teado.heroku.com)
+* [teado.heroku.com/touch](http://teado.heroku.com/touch)
 
 !SLIDE center
 
