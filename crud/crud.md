@@ -74,7 +74,7 @@
 
 !SLIDE
 
-## TODO: screenshot of Task form with 'create' button circled
+![](../images/create-button.png)
 
 !SLIDE code smaller
 
@@ -110,9 +110,9 @@
             @index()
         )
 
-!SLIDE
+!SLIDE center
 
-## TODO: screenshot of Sencha docs for form#submit function
+[![](../images/form-submit-docs.png)](http://docs.sencha.com/touch/2-0/#!/api/Ext.form.Panel-method-submit)
 
 !SLIDE code smaller
 
@@ -151,13 +151,9 @@
             form.showErrors(result)
         )
 
-!SLIDE
+!SLIDE center
 
-##TODO: screenshot of form with error messages
-
-!SLIDE
-
-##TODO: screenshot of "Working with forms" on Sencha Learn
+[![](../images/working-with-forms.jpg)](http://www.sencha.com/learn/working-with-forms/)
 
 !SLIDE code smaller
 

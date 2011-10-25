@@ -103,3 +103,5 @@ Now, we have to make sure that Sencha Touch can interpret this nested data. It's
 And that's it. If we load the nested JSON into the Tasks store, then each instance of the task model will acquire a `.tags()` method, which returns a Store containing the nested data.
 
 I hope that gives you some insight into how well the Sencha and Rails stacks play together. Rails serves JSON. And Sencha consumes it. Both frameworks do a great job of abstracting the implementation details out of site. And in both cases, you're left to deal with an elegant API.
+
+Running time: 7:34

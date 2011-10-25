@@ -1,4 +1,15 @@
-[_] find Wynn Netherland quote on sass/compass cf ruby/rails
+[_] extra slides
+	[_] link to slidedeck (QR code)
+	[_] link to touch2 branch
+	[_] contact me! @nelstrom
+	[_] Screenshots:
+		[_] golden spiral
+		[_] exquisite corpse
+		[_] bond girls
+
+[_] Showoff customisation
+	[_] replace Gill Sans with something better
+	[_] style a:visited as blue
 [_] screenshots
 	[_] Resize/crop web pages
 		[_] sass
@@ -8,8 +19,12 @@
 		[_] task update form, buttons circled
 	[_] documentation 
 		[_] forms#submit()
-		[_] swap ExtJS4 JSONP shot for ST2 of same
+		[X] swap ExtJS4 JSONP shot for ST2 of same
+	[_] link images to URLs
 
 [_] Teado
 	[_] add error reporting
 	[_] port to ST2
+		[_] update vendor/assets
+		[_] update the Compass-Sencha-Touch theme (create branch)
+		[_] Ext.define replaces Ext.extend

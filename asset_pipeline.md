@@ -74,3 +74,4 @@ Doing it this way gives us the flexibility to customize the theme for our app. F
 
 I mentioned earlier that this area is still somewhat in flux. I've found that compiling the Sencha Touch theme can take anywhere between 10 an 30 seconds when run inside the asset pipeline. When compiled by compass in isolation, it doesn't take as long as this. But I'm sure this will be ironed out over time.
 
+Running time: 7:30

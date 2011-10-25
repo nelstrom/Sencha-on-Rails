@@ -4,6 +4,12 @@
 ## Backing your Sencha apps
 ## with a Rails API
 
+!SLIDE center bullets
+
+![](../images/sencha-on-rails-QR.png)
+
+* [sencha-on-rails.heroku.com](http://sencha-on-rails.heroku.com)
+
 !SLIDE bullets incremental
 
 * Asset Pipeline
