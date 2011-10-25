@@ -20,11 +20,11 @@
 
 !SLIDE center
 
-![Screenshot of the homepage for SASS](../images/homepage-sass.png)
+[![Screenshot of the homepage for SASS](../images/homepage-sass.png)](http://sass-lang.com/)
 
 !SLIDE center
 
-![Screenshot of the homepage for Coffeescript](../images/homepage-coffeescript.png)
+[![Screenshot of the homepage for Coffeescript](../images/homepage-coffeescript.png)](http://jashkenas.github.com/coffee-script/)
 
 !SLIDE center
 

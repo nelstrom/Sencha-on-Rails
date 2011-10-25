@@ -72,7 +72,7 @@
 
 # CREATE
 
-!SLIDE
+!SLIDE center
 
 ![](../images/create-button.png)
 
