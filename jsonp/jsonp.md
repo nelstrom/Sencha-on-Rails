@@ -2,11 +2,10 @@
 
 # Backing a standalone app
 
-!SLIDE 
+!SLIDE center
 
-## Same origin policy
 
-prevents a document or script loaded from one origin from getting or setting properties of a document from another origin
+[![](../images/same-origin-policy.png)](https://developer.mozilla.org/en/Same_origin_policy_for_JavaScript)
 
 !SLIDE center
 
