@@ -276,13 +276,3 @@
     /* ...etc... */
 
 .notes Compile custom stylesheet
-
-!SLIDE
-
-## LINKS
-
-* [Installing compass in a rails 3.1 app][compass-rails31]
-* [Sencha Touch theme rubygem][theme]
-
-[compass-rails31]: https://gist.github.com/1184843
-[theme]: https://github.com/nelstrom/compass-sencha-touch
