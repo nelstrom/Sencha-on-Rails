@@ -227,4 +227,4 @@
 
 !SLIDE center
 
-TODO: screenshot of the update form, 'update' and 'delete' buttons circled
+![](../images/form-update-delete-buttons.png)
