@@ -1,5 +1,5 @@
 [_] extra slides
-	[_] link to slidedeck (QR code)
+	[X] link to slidedeck (QR code)
 	[_] link to touch2 branch
 	[_] contact me! @nelstrom
 	[_] Screenshots:
@@ -10,6 +10,7 @@
 [_] Showoff customisation
 	[_] replace Gill Sans with something better
 	[_] style a:visited as blue
+
 [_] screenshots
 	[_] Resize/crop web pages
 		[_] sass
