@@ -11,17 +11,16 @@
 	[X] replace Gill Sans with something better
 	[X] style a:visited as blue
 
-[_] screenshots
-	[_] Resize/crop web pages
-		[_] sass
-		[_] coffeescript
-	[_] Teado
-		[_] task form with errors
-		[_] task update form, buttons circled
-	[_] documentation 
-		[_] forms#submit()
+[X] screenshots
+	[X] Resize/crop web pages
+		[X] sass
+		[X] coffeescript
+	[X] Teado
+		[X] task update form, buttons circled
+	[X] documentation 
+		[X] forms#submit()
 		[X] swap ExtJS4 JSONP shot for ST2 of same
-	[_] link images to URLs
+	[X] link images to URLs
 
 [_] Teado
 	[_] add error reporting

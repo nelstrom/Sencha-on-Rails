@@ -13,7 +13,7 @@
 
 !SLIDE small
 
-## Serving *JSON* from rails
+## Serving JSON from rails
 
     @@@ruby
     def index
@@ -24,7 +24,7 @@
 
 !SLIDE small
 
-## Serving *JSON*P from rails
+## Serving JSON*P* from rails
 
     @@@ruby
     def index
@@ -86,21 +86,15 @@
 
 !SLIDE
 
-## SET IT
-### &
-## FORGET IT
-
-!SLIDE
-
 ## Using middleware to serve JSONP
 
 !SLIDE center
 
-![](../images/rack-contrib.png)
+[![](../images/rack-contrib.png)](https://github.com/rack/rack-contrib)
 
 !SLIDE center
 
-![](../images/rack-contrib-readme.png)
+[![](../images/rack-contrib-readme.png)](https://github.com/rack/rack-contrib#readme)
 
 !SLIDE code small
 
@@ -121,6 +115,12 @@
         # ...
       end
     end
+
+!SLIDE
+
+## SET IT
+### &
+## FORGET IT
 
 !SLIDE bullets
 
