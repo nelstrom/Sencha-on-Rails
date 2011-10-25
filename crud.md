@@ -14,7 +14,9 @@ This is what the default rails template looks like. See that declaration that re
 
 CSRF stands for cross site request forgery. This is a page from the rails security guide, for which you'll be able to find a link in my slide deck.
 
-CSRF is ... TODO!
+If a user is logged in to your application, and they visit other sites elsewhere on the internet, they could potentially be exposed to a CSRF attack. This is where the hacker attempts to submit a post request to your website, perhaps corrupting or destroying the user's data.
+
+As a security measure, Rails always includes an extra token whenever you submit a POST request. If the token is incorrect or missing, then rails will silently kill the user session, without making any changes to the user's data.
 
 In a regular HTML rails app, you don't have to give much thought to the measures that rails takes to protect your app from CSRF. So long as you always use the form helper tags, then rails will add a hidden field containing the csrf token to your forms.
 

@@ -157,16 +157,6 @@
 
 !SLIDE
 
-## Rails convention
-
-    app/
-      models/
-      views/
-      controllers/
-      assets/
-
-!SLIDE
-
 ## Sencha convention
 
     app/
@@ -174,6 +164,16 @@
       views/
       controllers/
       stores/
+
+!SLIDE
+
+## Rails convention
+
+    app/
+      models/
+      views/
+      controllers/
+      assets/
 
 !SLIDE
 
