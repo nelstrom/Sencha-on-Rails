@@ -1,12 +1,16 @@
+[_] intro
+	[X] link to slides
+	[_] coupon code
+		PragProgDrewNeilVim
+		Expires 7 November
+	[_] link to online demo
+	[_] link to Sencha Touch 2 branch
+
 [_] extra slides
 	[X] link to slidedeck (QR code)
-	[_] link to touch2 branch
+	[X] link to touch2 branch
 	[_] coupon code
 	[_] contact me! @nelstrom
-	[_] Screenshots:
-		[_] golden spiral
-		[_] exquisite corpse
-		[_] bond girls
 
 [X] Showoff customisation
 	[X] replace Gill Sans with something better

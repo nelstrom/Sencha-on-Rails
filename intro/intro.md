@@ -6,6 +6,8 @@
 
 !SLIDE center bullets
 
+## SLIDES
+
 ![](../images/sencha-on-rails-QR.png)
 
 * [sencha-on-rails.heroku.com](http://sencha-on-rails.heroku.com)
@@ -24,6 +26,12 @@
 # Demo app: Teado
 ## A(nother) Sencha Touch Todo list
 
-* [github.com/nelstrom/teado][teado]
+* [github.com/nelstrom/teado](http://github.com/nelstrom/teado)
 
-[teado]: http://github.com/nelstrom/teado
+!SLIDE
+
+!SLIDE center
+
+[![](../images/teado-2-branch.png)](https://github.com/nelstrom/Teado/branches)
+
+
