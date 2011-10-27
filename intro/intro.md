@@ -1,14 +1,3 @@
-!SLIDE center
-
-![](../images/prags-cover.png)
-
-!SLIDE bullets incremental
-
-* coupon: PragProgDrewNeilVim
-* expires: 7 November, 2011
-* 25% discount on any Pragmatic title
-* [pragprog.com](http://pragprog.com)
-
 !SLIDE bullets
 
 # Sencha on Rails

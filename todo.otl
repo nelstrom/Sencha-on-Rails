@@ -32,12 +32,3 @@
 		[_] update vendor/assets
 		[_] update the Compass-Sencha-Touch theme (create branch)
 		[_] Ext.define replaces Ext.extend
-
-I'm running a ruby breakout session in the level 4 ballroom (where we had lunch) #SenchaCon
-In the ruby breakout session, we'll learn how to build an API to back your Sencha Touch app with Rails. REST, CRUD and JSONP REST, CRUD and JSONP.
-
-At #SenchaCon? Come and learn how to build a restful Rails API to back your Sencha apps at my ruby breakout session.
-In the #SenchaCon ruby breakout session we'll build a simple CRUD demo that consumes JSONP, served by Rails.
-How about a taste of coffeescript? Join me for the ruby breakout session, where we'll meet the Rails asset pipeline #SenchaCon
-
-Slides for my Sencha on Rails breakout session at #SenchaCon are online here: http://sencha-on-rails.heroku.com/
